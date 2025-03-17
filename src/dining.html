@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DINING</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+  <header class="fixed inset-x-0 top-0 flex justify-between items-center px-8 py-4 bg-zinc-700 bg-opacity-80 backdrop-blur-md z-[100] max-sm:px-6">
+    <!-- Logo -->
+    <h1 class="block py-1 text-lg font-semibold text-white">Wakaya Island Resort</h1>
+
+    <!-- Desktop Navigation -->
+    <nav class="flex flex-1 justify-center gap-8 max-md:gap-4 max-sm:hidden">
+        <a href="index.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">HOME</a>
+        <a href="accommodation.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">ACCOMMODATIONS</a>
+        <a href="activities.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">ACTIVITIES</a>
+        <a href="dining.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">DINING</a>
+        <a href="spa.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">SPA</a>
+        <a href="#contactform" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">CONTACT</a>
+    </nav>
+
+    <!-- Weather Button & Info -->
+    <div class="flex items-center gap-4 max-sm:hidden">
+        <button onclick="getWeather()" class="text-sm font-medium text-white hover:text-gray-300 px-4 py-2 rounded-full transition duration-300">
+            🌤️ Weather Now
+        </button>
+        <span id="weather-info" class="text-sm font-medium text-white"></span>
+    </div>
+
+    <!-- Book Now Button -->
+    <a href="booking.html" class="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300 max-sm:hidden">
+        BOOK NOW
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button class="text-2xl text-white cursor-pointer hidden max-sm:block" id="menu-btn">
+        ☰
+    </button>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden flex-col absolute top-full left-0 w-full bg-zinc-700 bg-opacity-90 p-4 shadow-lg">
+        <a href="index.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">HOME</a>
+        <a href="accommodation.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">ACCOMMODATIONS</a>
+        <a href="activities.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">ACTIVITIES</a>
+        <a href="dining.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">DINING</a>
+        <a href="spa.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">SPA</a>
+        <a href="#contactform" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">CONTACT</a>
+        <button onclick="getWeather()" class="block text-sm text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full transition duration-300 text-center mt-2">
+            🌤️ Weather Now
+        </button>
+        <span id="mobile-weather-info" class="block text-sm text-white text-center mt-2"></span>
+        <a href="booking.html" class="block text-sm text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300 text-center mt-2">BOOK NOW</a>
+    </nav>
+</header>
+  <main>
+    <!-- Hero Section -->
+    <section class="relative w-full h-screen overflow-hidden">
+                <!-- Background Image with Dark Overlay -->
+                <div class="absolute w-full h-full bg-black/50"> <!-- Dark overlay (50% opacity) -->
+                    <img 
+                        src="./assets/wakaya/background_dining.webp" 
+                        class="w-full h-full object-cover opacity-70 grayscale-[20%]"
+                        alt="Resort Background"
+                    />
+                </div>
+    
+                <!-- Hero Content -->
+                <div class="absolute top-1/2 left-1/2 flex flex-col gap-8 items-center -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                    <p class="text-5xl font-bold text-white max-sm:text-3xl">
+                        DINING
+                    </p>
+                </div>
+    </section>
+
+
+    <section class="px-6 py-10 mt-10 w-full bg-zinc-300 max-md:px-5 max-md:max-w-full">
+      <div class="max-md:max-w-full flex flex-col items-center gap-3">
+        <!-- First Row -->
+        <div class="flex justify-center gap-3">
+          <img
+            src="./assets/wakaya/Dining_food.webp"
+            alt="Gallery image 1"
+            class="object-cover w-[150px] h-[100px] rounded-md"
+          />
+          <img
+            src="./assets/wakaya/dining_food7.webp"
+            alt="Gallery image 2"
+            class="object-cover w-[150px] h-[100px] rounded-md"
+          />
+        </div>
+    
+        <!-- Second Row -->
+        <div class="flex justify-center gap-3">
+          <img
+            src="./assets/wakaya/Dining_food1.webp"
+            alt="Gallery image 3"
+            class="object-cover w-[150px] h-[100px] rounded-md"
+          />
+          <img
+            src="./assets/wakaya/Dining_food2.webp"
+            alt="Gallery image 4"
+            class="object-cover w-[150px] h-[100px] rounded-md"
+          />
+        </div>
+      </div>
+    </section>
+    
+    
+    
+
+    <section class="flex flex-col items-center px-10 pt-9 pb-16 w-full bg-zinc-300 max-md:px-5 max-md:max-w-full">
+      <!-- Text Content -->
+      <article class="flex flex-col items-center mt-8 max-w-full text-4xl text-black w-[582px] max-md:mt-6">
+        <h2 class="text-center">FARM TO TABLE</h2>
+        <p class="mt-4 text-center text-xl max-md:max-w-full">
+          Wakaya Island, a 2200-acre land, is blessed with nutrient-rich volcanic soil in the Fiji archipelago. Farming is a way of living in Fiji and is no exception to the Wakaya community.
+          <br /><br />
+          We create authentic menus using what is grown on the island, as we believe that anything naturally grown is essential for a long and healthy life.
+        </p>
+      </article>             
+            
+      <!-- Image Row -->
+      <figure class="mt-5 flex flex-wrap justify-center gap-4 w-full max-w-[900px]">
+        <!-- Image 1 -->
+        <img
+          src="./assets/wakaya/farmtable_dining.webp"
+          alt="Farm to table produce"
+          class="object-cover w-[200px] h-[150px] rounded-lg"
+        />
+        <!-- Image 2 -->
+        <img
+          src="./assets/wakaya/farmtable_dining1.webp"
+          alt="Farming on Wakaya Island"
+          class="object-cover w-[200px] h-[150px] rounded-lg"
+        />
+        <!-- Image 3 -->
+        <img
+          src="./assets/wakaya/farmtable_dining2.webp "
+          alt="Wakaya Island farming"
+          class="object-cover w-[200px] h-[150px] rounded-lg"
+        />
+      </figure>
+    </section>
+    
+    
+    
+
+  </main>
+  <footer class="bg-gray-100 py-12 text-black">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- Logo -->
+      <div class="flex justify-center">
+        <img
+          src="./assets/wakaya/logologo.webp"
+          alt="Wakaya Island Resort Logo"
+          class="h-full w-35"
+        />
+      </div>
+  
+      <!-- Divider -->
+      <hr class="my-8 border-gray-300" />
+  
+      <!-- Main Content -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Social Media Section -->
+        <div class="text-center md:text-left">
+          <h3 class="text-xl font-semibold mb-4">FOLLOW US</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="hover:text-gray-600">Facebook: Wakaya Island Resort</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-600">Instagram: @wakayaislandresort</a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Contact Section -->
+        <div class="text-center md:text-left">
+          <h3 class="text-xl font-semibold mb-4">CONTACT US</h3>
+          <ul class="space-y-2">
+            <li>Phone: +679 892 6901</li>
+            <li>Email: booking@wakayaislandresort.com</li>
+          </ul>
+        </div>
+  
+        <!-- Location Section -->
+        <div class="text-center md:text-left">
+          <h3 class="text-xl font-semibold mb-4">LOCATE US</h3>
+          <p>Wakaya Island, Lomaiviti Archipelago, Fiji</p>
+        </div>
+      </div>
+  
+      <!-- Divider -->
+      <hr class="my-8 border-gray-300" />
+    </div>
+  </footer>
+  <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+  </script>
+  <script>
+    async function getWeather() {
+        const apiKey = "ae8aaadd7500431294865904251703"; // Ensure this API key is valid
+        const location = "Lomaiviti,FJ"; // Location format: City,CountryCode
+        const weatherInfo = document.getElementById("weather-info");
+        const mobileWeatherInfo = document.getElementById("mobile-weather-info");
+
+        if (!weatherInfo || !mobileWeatherInfo) {
+            console.error("Weather elements not found.");
+            return;
+        }
+
+        try {
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
+            const response = await fetch(url);
+
+            if (!response.ok) {
+                throw new Error(`HTTP Error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log("Weather Data:", data); // Debugging: See the response in the console
+
+            if (!data.main || !data.weather) {
+                throw new Error("Invalid data format received from API");
+            }
+
+            const weatherText = `🌡️ ${Math.round(data.main.temp)}°C - ${data.weather[0].description}`;
+            weatherInfo.innerText = weatherText;
+            mobileWeatherInfo.innerText = weatherText;
+        } catch (error) {
+            console.error("Weather fetch error:", error);
+            weatherInfo.innerText = "Weather Unavailable";
+            mobileWeatherInfo.innerText = "Weather Unavailable";
+        }
+    }
+
+  </script>
+  
+</body>
+
+</html>

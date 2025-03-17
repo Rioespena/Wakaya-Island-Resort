@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accommodation</title>
+    <link href="./output.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="fixed inset-x-0 top-0 flex justify-between items-center px-8 py-4 bg-zinc-700 bg-opacity-80 backdrop-blur-md z-[100] max-sm:px-6">
+      <!-- Logo -->
+      <h1 class="block py-1 text-lg font-semibold text-white">Wakaya Island Resort</h1>
+    
+      <!-- Desktop Navigation -->
+      <nav class="flex flex-1 justify-center gap-8 max-md:gap-4 max-sm:hidden">
+        <a href="index.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">HOME</a>
+        <a href="accommodation.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">ACCOMMODATIONS</a>
+        <a href="activities.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">ACTIVITIES</a>
+        <a href="dining.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">DINING</a>
+        <a href="spa.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">SPA</a>
+      </nav>
+    
+      <!-- Book Now Button -->
+      <a href="booking.html" class="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300 max-sm:hidden">
+        BOOK NOW
+      </a>
+    
+      <!-- Mobile Menu Button -->
+      <button class="text-2xl text-white cursor-pointer hidden max-sm:block" id="menu-btn">
+        ☰
+      </button>
+    
+      <!-- Mobile Menu -->
+      <nav id="mobile-menu" class="hidden flex-col absolute top-full left-0 w-full bg-zinc-700 bg-opacity-90 p-4 shadow-lg">
+        <a href="index.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">HOME</a>
+        <a href="accommodation.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">ACCOMMODATIONS</a>
+        <a href="activities.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">ACTIVITIES</a>
+        <a href="dining.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">DINING</a>
+        <a href="spa.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">SPA</a>
+        <a href="booking.html" class="block  text-sm text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300 text-center">BOOK NOW</a>
+      </nav>
+    </header>  
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative w-full h-screen overflow-hidden">
+            <!-- Background Image with Dark Overlay -->
+            <div class="absolute w-full h-full bg-black/50"> <!-- Dark overlay (50% opacity) -->
+                <img 
+                    src="./assets/wakaya/backacomo.webp" 
+                    class="w-full h-full object-cover opacity-70 grayscale-[20%]"
+                    alt="Resort Background"
+                />
+            </div>
+
+            <!-- Hero Content -->
+            <div class="absolute top-1/2 left-1/2 flex flex-col gap-8 items-center -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                <p class="text-5xl font-bold text-white max-sm:text-3xl">
+                    ACCOMMODATION
+                </p>
+            </div>
+        </section>
+
+        <!-- Text Section -->
+        <section class="flex flex-col items-center px-6 py-16 text-center">
+            <header class="mb-20">
+                <h1 class="text-5xl font-semibold text-black max-md:text-4xl">
+                    Experience Your Perfect Isalnd Hideaway
+                </h1>
+            </header>
+
+            <article class="max-w-3xl text-xl text-gray-800">
+                <p>
+                    Wakaya Island Resort offers luxurious accommodations designed for ultimate relaxation and privacy.
+                    Choose from charming beachfront bures or expansive villas, each with stunning ocean views, private plunge pools, 
+                    and open living spaces. Blending traditional Fijian style with modern comforts, our rooms provide the perfect retreat in an idyllic tropical paradise.
+                    Find your perfect hideaway and experience the serene beauty of Wakaya Island.
+                </p>
+            </article>
+        </section>
+
+        <section class="flex flex-col justify-center items-center px-6 py-16 w-full max-md:px-5 max-sm:px-4">
+            <img
+                src="./assets/wakaya/logo.webp"
+                alt="Bures Logo"
+                class="w-[107px] h-[107px] mb-[9px]"
+            />
+            <h2 class="mb-10 text-5xl font-extrabold text-black">BURES</h2>
+            <h3
+            class="mb-5 text-4xl text-center text-black max-md:text-3xl max-sm:text-3xl">
+            ONE & TWO BEDROOM SUITES
+            </h3>
+            <p class="text-2xl leading-normal text-center text-black max-w-[1242px] max-md:text-xl max-sm:text-lg">
+                Our ten free-standing waterfront Fijian cottage suites, or bures,
+                feature cathedral ceilings, woven bamboo wall
+                coverings, and indigenous yaka timber flooring. Oh, and we can't forget the
+                air conditioning, high-speed WiFi, and luxurious bathroom with oversized
+                soaking tub, of course!
+            </p>
+        </section>
+      
+        <style>
+          /* Add this CSS to your stylesheet or within a <style> tag */
+          .hover-scale {
+            transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+          }
+        
+          .hover-scale:hover {
+            transform: scale(1.05); /* Scales the image up by 5% on hover */
+          }
+        </style>
+        
+        <section class="rounded-none">
+          <article class="flex flex-col justify-center px-3 py-16 w-full rounded-3xl bg-zinc-300 max-md:py-24 max-md:max-w-full">
+            <div class="mb-0 max-md:mb-2.5 max-md:max-w-full">
+              <div class="flex gap-5 max-md:flex-col">
+                <figure class="w-6/12 max-md:ml-0 max-md:w-full">
+                  <img
+                    src="./assets/wakaya/gardenviewbure.webp"
+                    alt="Garden View Bure accommodation"
+                    class="object-contain grow mt-8 w-full aspect-[1.5] max-md:mt-10 max-md:max-w-full hover-scale"
+                  />
+                </figure>
+                <div class="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                  <div class="flex flex-col items-center text-xl text-black max-md:mt-10 max-md:max-w-full">
+                    <h1 class="text-5xl font-extrabold text-center max-md:text-4xl">
+                      Garden View Bure
+                    </h1>
+                    <p class="ml-2.5 text-center max-md:max-w-full">
+                      Sleeps 2 adults & 1 child 1 king bed 1 bathroom 1,650 sqft
+                    </p>
+                    <h2 class="mt-12 text-2xl max-md:mt-10">ONE BEDROOM SUITE</h2>
+                    <p class="self-stretch mt-11 text-center max-md:mt-10 max-md:max-w-full">
+                      Unwind and relax to the sound of the ocean from your bed or
+                      spacious living room, indulge in a luxurious soak in the oversized
+                      tub, or rejuvenate your senses with an open-air lava rock shower.
+                      Nestled within lush Fijian landscaping, this 1,650sqft one-bedroom
+                      suite is a serene and private retreat located closest to our
+                      oceanfront swimming pool and only a short, scenic stroll away from
+                      the stunning white sand beach.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        
+        <section class="mt-10 rounded-none">
+          <article class="flex flex-col justify-center px-3 py-16 w-full rounded-3xl bg-zinc-300 max-md:py-24 max-md:max-w-full">
+            <div class="mb-0 max-md:mb-2.5 max-md:max-w-full">
+              <div class="flex gap-5 max-md:flex-col">
+                <div class="w-6/12 max-md:ml-0 max-md:w-full">
+                  <div class="flex flex-col items-center text-xl text-black max-md:mt-10 max-md:max-w-full">
+                    <h1 class="text-5xl font-extrabold text-center max-md:text-4xl">
+                      Ocean View Bure
+                    </h1>
+                    <p class="ml-2.5 text-center max-md:max-w-full">
+                      Sleeps 2 adults & 1 child 1 king bed 1 bathroom 1,650 sqft
+                    </p>
+                    <h2 class="mt-12 text-2xl max-md:mt-10">ONE BEDROOM SUITE</h2>
+                    <p class="self-stretch mt-11 text-center max-md:mt-10 max-md:max-w-full">
+                      Relax and take in the ocean view from your bed or spacious living room, indulge in a luxurious soak 
+                      in the oversized tub, or rejuvenate your senses with an open-air lava rock shower. 
+                      Your 1,650sqft one-bedroom suite is a serene and private retreat surrounded by lush Fijian landscaping, 
+                      just steps away from our oceanfront swimming pool and a short, scenic stroll down to the stunning white sand beach.
+                    </p>
+                  </div>
+                </div>
+                <figure class="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                  <img
+                    src="./assets/wakaya/ACCOM01.webp"
+                    alt="Garden View Bure accommodation"
+                    class="object-contain grow mt-8 w-full aspect-[1.5] max-md:mt-10 max-md:max-w-full hover-scale"
+                  />
+                </figure>
+              </div>
+            </div>
+          </article>
+        </section>
+        
+        <section class="mt-10 rounded-none">
+          <article class="flex flex-col justify-center px-3 py-16 w-full rounded-3xl bg-zinc-300 max-md:py-24 max-md:max-w-full">
+            <div class="mb-0 max-md:mb-2.5 max-md:max-w-full">
+              <div class="flex gap-5 max-md:flex-col">
+                <figure class="w-6/12 max-md:ml-0 max-md:w-full">
+                  <img
+                    src="./assets/wakaya/ACCOMO2.webp"
+                    alt="Garden View Bure accommodation"
+                    class="object-contain grow mt-8 w-full aspect-[1.5] max-md:mt-10 max-md:max-w-full hover-scale"
+                  />
+                </figure>
+                <div class="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                  <div class="flex flex-col items-center text-xl text-black max-md:mt-10 max-md:max-w-full">
+                    <h1 class="text-5xl font-extrabold text-center max-md:text-4xl">
+                      Yase Bure
+                    </h1>
+                    <p class="ml-2.5 text-center max-md:max-w-full">
+                      Sleeps 2 adults & 1 child 1 king bed 1 bathroom 1,650 sqft
+                    </p>
+                    <h2 class="mt-12 text-2xl max-md:mt-10">ONE BEDROOM SUITE</h2>
+                    <p class="self-stretch mt-11 text-center max-md:mt-10 max-md:max-w-full">
+                      Enjoy breathtaking views of the South Pacific and sandy shoreline just outside your door. 
+                      This magnificent 2,400 sqft hideaway is elegantly designed with unbeatable privacy 
+                      and conveniently located just steps away from world-class scuba diving and fishing expeditions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        
+        <section class="mt-10 rounded-none">
+          <article class="flex flex-col justify-center px-3 py-16 w-full rounded-3xl bg-zinc-300 max-md:py-24 max-md:max-w-full">
+            <div class="mb-0 max-md:mb-2.5 max-md:max-w-full">
+              <div class="flex gap-5 max-md:flex-col">
+                <div class="w-6/12 max-md:ml-0 max-md:w-full">
+                  <div class="flex flex-col items-center text-xl text-black max-md:mt-10 max-md:max-w-full">
+                    <h1 class="text-5xl font-extrabold text-center max-md:text-4xl">
+                      Vale Levu
+                    </h1>
+                    <p class="ml-2.5 text-center max-md:max-w-full">
+                      Sleeps 4 adults & 2 children 2 bedrooms 2 king beds 2 bathrooms 4,500 sqft
+                    </p>
+                    <h2 class="mt-12 text-2xl max-md:mt-10">TWO BEDROOM SUITE</h2>
+                    <p class="self-stretch mt-11 text-center max-md:mt-10 max-md:max-w-full">
+                      Pamper yourself in our largest suite spanning 4,500 sqft complete with oceanfront views, 
+                      2 master bedrooms, and your own private spa treatment room & plunge pool. 
+                      Each bedroom features a king bed, a lavish bathroom with separate vanities, 
+                      a private outdoor shower, and an oversized soaking tub designed for two.
+                    </p>
+                  </div>
+                </div>
+                <figure class="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                  <img
+                    src="./assets/wakaya/Valelevu.webp"
+                    alt="Garden View Bure accommodation"
+                    class="object-contain grow mt-8 w-full aspect-[1.5] max-md:mt-10 max-md:max-w-full hover-scale"
+                  />
+                </figure>
+              </div>
+            </div>
+          </article>
+        </section>
+        
+        <section class="flex flex-col justify-center items-center px-6 py-16 w-full max-md:px-5 max-sm:px-4">
+          <img
+            src="./assets/wakaya/logo.webp"
+            alt="Bures Logo"
+            class="w-[107px] h-[107px] mb-[9px]"
+          />
+          <h2 class="mb-10 text-5xl font-extrabold text-black">VILLAS</h2>
+          <h3 class="mb-5 text-4xl text-center text-black max-md:text-3xl max-sm:text-3xl">
+            TWO THREE BEDROOM ESTATES
+          </h3>
+          <p class="text-2xl leading-normal text-center text-black max-w-[1242px] max-md:text-xl max-sm:text-lg">
+            Enjoy the ultimate retreat in luxury and tranquility in our 2 & 3 Bedroom Villas with stunning panoramic ocean views. Experience the complete privacy and 
+            attentive personal service with private pool and dedicated household staff including personal chef and on call driver.
+          </p>
+        </section>
+        
+        <section class="mt-10 rounded-none">
+          <article class="flex flex-col justify-center px-3 py-16 w-full rounded-3xl bg-zinc-300 max-md:py-24 max-md:max-w-full">
+            <div class="mb-0 max-md:mb-2.5 max-md:max-w-full">
+              <div class="flex gap-5 max-md:flex-col">
+                <figure class="w-6/12 max-md:ml-0 max-md:w-full">
+                  <img
+                    src="./assets/wakaya/valeo.webp"
+                    alt="Garden View Bure accommodation"
+                    class="object-contain grow mt-8 w-full aspect-[1.5] max-md:mt-10 max-md:max-w-full hover-scale"
+                  />
+                </figure>
+                <div class="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                  <div class="flex flex-col items-center text-xl text-black max-md:mt-10 max-md:max-w-full">
+                    <h1 class="text-5xl font-extrabold text-center max-md:text-4xl">
+                      Vale'O
+                    </h1>
+                    <p class="ml-2.5 text-center max-md:max-w-full">
+                      Sleeps 6 adults & 3 children     3 bedrooms    3 king beds    3.5 bathrooms     12,000sqft on 16-acre estate
+                    </p>
+                    <h2 class="mt-12 text-2xl max-md:mt-10">TWO BEDROOM SUITE</h2>
+                    <p class="self-stretch mt-11 text-center max-md:mt-10 max-md:max-w-full">
+                      Located on a 16-acre hilltop estate with panoramic views, this 12,000 sqft villa is said to be the one of the finest in the South Pacific. 
+                      This three-bedroom villa includes a private swimming pool overlooking the stunning Koro Sea, night-lit tennis court, 
+                      and dedicated household staff including a personal chef and an on-call driver.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        
+        <section class="mt-10 rounded-none">
+          <article class="flex flex-col justify-center px-3 py-16 w-full rounded-3xl bg-zinc-300 max-md:py-24 max-md:max-w-full">
+            <div class="mb-0 max-md:mb-2.5 max-md:max-w-full">
+              <div class="flex gap-5 max-md:flex-col">
+                <div class="w-6/12 max-md:ml-0 max-md:w-full">
+                  <div class="flex flex-col items-center text-xl text-black max-md:mt-10 max-md:max-w-full">
+                    <h1 class="text-5xl font-extrabold text-center max-md:text-4xl">
+                      Sega Na Leqa
+                    </h1>
+                    <p class="ml-2.5 text-center max-md:max-w-full">
+                      Sleeps 6 adults & 3 children     3 bedrooms    3 king beds    3.5 bathrooms     12,000sqft on 16-acre estate
+                    </p>
+                    <h2 class="mt-12 text-2xl max-md:mt-10">TWO BEDROOM VILLA WITH GUEST HOUSE</h2>
+                    <p class="self-stretch mt-11 text-center max-md:mt-10 max-md:max-w-full">
+                      Experience the ultimate in luxury and tranquility. Our newest addition named Sega Na Leqa (Fijian for “No Worries”) is one of 
+                      the most stunning luxurious retreats in the Southern Hemisphere. You’ll enjoy a master wing with two separate bathrooms, exercise rooms, and an exercise pool. 
+                      Plus an incredibly spacious living area including a state-of-the-art kitchen, a library, Grand Foyer, and Great Hall. 
+                      The home also features a private guest suite with a living room, bathroom, bedroom with king bed, and plunging pool.
+                    </p>
+                  </div>
+                </div>
+                <figure class="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                  <img
+                    src="./assets/wakaya/Seqa-Na-Leqa.webp"
+                    alt="Garden View Bure accommodation"
+                    class="object-contain grow mt-8 w-full aspect-[1.5] max-md:mt-10 max-md:max-w-full hover-scale"
+                  />
+                </figure>
+              </div>
+            </div>
+          </article>
+        </section>
+    </main>
+
+
+    <footer class="bg-gray-100 py-12 text-black">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <!-- Logo -->
+          <div class="flex justify-center">
+            <img
+              src="./assets/wakaya/logologo.webp"
+              alt="Wakaya Island Resort Logo"
+              class="h-full w-35"
+            />
+          </div>
+      
+          <!-- Divider -->
+          <hr class="my-8 border-gray-300" />
+      
+          <!-- Main Content -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Social Media Section -->
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-semibold mb-4">FOLLOW US</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="hover:text-gray-600">Facebook: Wakaya Island Resort</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-gray-600">Instagram: @wakayaislandresort</a>
+                </li>
+              </ul>
+            </div>
+      
+            <!-- Contact Section -->
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-semibold mb-4">CONTACT US</h3>
+              <ul class="space-y-2">
+                <li>Phone: +679 892 6901</li>
+                <li>Email: booking@wakayaislandresort.com</li>
+              </ul>
+            </div>
+      
+            <!-- Location Section -->
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-semibold mb-4">LOCATE US</h3>
+              <p>Wakaya Island, Lomaiviti Archipelago, Fiji</p>
+            </div>
+          </div>
+      
+          <!-- Divider -->
+          <hr class="my-8 border-gray-300" />
+        </div>
+    </footer>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+  </body>
+</html>

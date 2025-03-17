@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+  <header class="fixed inset-x-0 top-0 flex justify-between items-center px-8 py-4 bg-zinc-700 bg-opacity-80 backdrop-blur-md z-[100] max-sm:px-6">
+    <!-- Logo -->
+    <h1 class="block py-1 text-lg font-semibold text-white">Wakaya Island Resort</h1>
+  
+    <!-- Desktop Navigation -->
+    <nav class="flex flex-1 justify-center gap-8 max-md:gap-4 max-sm:hidden">
+      <a href="index.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">HOME</a>
+      <a href="accommodation.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">ACCOMMODATIONS</a>
+      <a href="activities.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">ACTIVITIES</a>
+      <a href="dining.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">DINING</a>
+      <a href="spa.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">SPA</a>
+    </nav>
+  
+    <!-- Book Now Button -->
+    <a href="booking.html" class="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300 max-sm:hidden">
+      BOOK NOW
+    </a>
+  
+    <!-- Mobile Menu Button -->
+    <button class="text-2xl text-white cursor-pointer hidden max-sm:block" id="menu-btn">
+      ☰
+    </button>
+  
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden flex-col absolute top-full left-0 w-full bg-zinc-700 bg-opacity-90 p-4 shadow-lg">
+      <a href="index.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">HOME</a>
+      <a href="accommodation.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">ACCOMMODATIONS</a>
+      <a href="activities.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">ACTIVITIES</a>
+      <a href="dining.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">DINING</a>
+      <a href="spa.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">SPA</a>
+      <a href="booking.html" class="block  text-sm text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300 text-center">BOOK NOW</a>
+    </nav>
+  </header>  
+
+<main>
+  <section class="relative w-full h-screen overflow-hidden">
+        <div class="absolute w-full h-full bg-black/100"> <!-- Increased overlay opacity to 70% for a darker look -->
+            <img 
+                src="./assets/wakaya/backgroundimg_activities.webp" 
+                class="w-full h-full  grayscale-[15%] object-cover opacity-80"
+                alt="Resort Background"
+            />
+        </div>
+        <div class="absolute top-1/2 left-1/2 flex flex-col gap-8 items-center -translate-x-1/2 -translate-y-1/2 text-center text-white">
+            <p class="text-5xl font-bold text-white max-sm:text-3xl">
+                ACTIVITIES
+            </p>
+        </div>
+  </section>
+
+  <section class="flex flex-col justify-center items-center px-6 py-16 w-full max-md:px-5 max-sm:px-4">
+    <img src="./assets/wakaya/logo.webp" alt="Bures Logo" class="w-[100px] h-[100px] mb-4" />
+    <h2 class="mb-6 text-3xl font-extrabold text-black text-center max-md:text-4xl max-sm:text-3xl">
+      Experience the Ultimate Island Adventure at Wakaya
+    </h2>
+    <p class="text-1xl leading-normal text-center text-black max-w-[800px] max-md:text-xl max-sm:text-lg">
+      Dive into vibrant coral reefs with snorkeling and scuba diving, or explore the serene waters with kayaking and paddleboarding. Hike through lush landscapes and take in breathtaking views, then unwind with traditional spa treatments using local ingredients. Immerse yourself in Wakaya's culture with village visits and cooking classes, creating unforgettable memories in this island paradise.
+    </p>
+  </section>
+  
+  <section class="px-5 py-10 bg-zinc-300 bg-opacity-70">
+    <div class="grid gap-8 mx-auto my-0 grid-cols-[repeat(3,1fr)] max-w-[1440px] max-md:grid-cols-[repeat(2,1fr)] max-sm:grid-cols-[1fr]">
+      <article class="flex overflow-hidden flex-col rounded-lg bg-zinc-300 max-sm:mb-5 group">
+        <div class="relative overflow-hidden">
+          <img src="./assets/wakaya/ACTIVIRIES1.webp" alt="Diving" class="object-cover w-full h-[280px] transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        <div class="flex flex-col items-center p-5 text-center">
+          <h2 class="mb-5 text-3xl font-bold">DIVING</h2>
+          <p class="mb-8 text-base leading-normal text-black">
+            Explore vibrant underwater worlds with thrilling diving experiences, where you can discover colorful coral reefs, diverse marine life, and crystal-clear waters. Perfect for both beginners and seasoned divers seeking an unforgettable adventure.
+          </p>
+        </div>
+      </article>
+  
+      <article class="flex overflow-hidden flex-col rounded-lg bg-zinc-300 max-sm:mb-5 group">
+        <div class="relative overflow-hidden">
+          <img src="./assets/wakaya/wakaya-fishing.webp" alt="Fishing" class="object-cover w-full h-[280px] transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        <div class="flex flex-col items-center p-5 text-center">
+          <h2 class="mb-5 text-3xl font-bold">FISHING</h2>
+          <p class="mb-8 text-base leading-normal text-black">
+            Experience the thrill of fishing in pristine waters, where you can cast your line and reel in a variety of fish while surrounded by stunning natural beauty. Whether you're a novice or an expert, it's a peaceful and rewarding activity for all.
+          </p>
+        </div>
+      </article>
+  
+      <article class="flex overflow-hidden flex-col rounded-lg bg-zinc-300 max-sm:mb-5 group">
+        <div class="relative overflow-hidden">
+          <img src="./assets/wakaya/wakaya_sailing.webp" alt="Sailing" class="object-cover w-full h-[280px] transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        <div class="flex flex-col items-center p-5 text-center">
+          <h2 class="mb-5 text-3xl font-bold">SAILING</h2>
+          <p class="mb-8 text-base leading-normal text-black">
+            Set sail on tranquil waters and enjoy the freedom of the open sea. Whether you're a seasoned sailor or a beginner, experience the thrill of gliding through crystal-clear waters while taking in breathtaking coastal views. Perfect for those seeking adventure or relaxation on the water.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+  
+  <section class="px-5 bg-zinc-300 bg-opacity-70">
+    <div class="grid gap-8 mx-auto my-0 grid-cols-[repeat(3,1fr)] max-w-[1440px] max-md:grid-cols-[repeat(2,1fr)] max-sm:grid-cols-[1fr]">
+      <article class="flex overflow-hidden flex-col rounded-lg bg-zinc-300 max-sm:mb-5 group">
+        <div class="relative overflow-hidden">
+          <img src="./assets/wakaya/wakaya_activities.webp" alt="Tennis" class="object-cover w-full h-[280px] transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        <div class="flex flex-col items-center p-5 text-center">
+          <h2 class="mb-5 text-3xl font-bold">TENNIS</h2>
+          <p class="mb-8 text-base leading-normal text-black">
+            Enjoy a friendly match under the stars on our night-lit tennis court, a fun experience for tennis-lovers or those looking for a unique way to spend time.
+          </p>
+        </div>
+      </article>
+  
+      <article class="flex overflow-hidden flex-col rounded-lg bg-zinc-300 max-sm:mb-5 group">
+        <div class="relative overflow-hidden">
+          <img src="./assets/wakaya/Wakaya_activities1.webp" alt="Yoga and Meditation" class="object-cover w-full h-[280px] transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        <div class="flex flex-col items-center p-5 text-center">
+          <h2 class="mb-5 text-3xl font-bold">YOGA AND MEDITATION</h2>
+          <p class="mb-8 text-base leading-normal text-black">
+            Take a deep breath and immerse yourself in the tranquility of our island paradise with self-guided yoga and meditation sessions, whether in your bure or tucked into your favorite secluded spot on the island. Yoga equipment available in the Fitness Bure.
+          </p>
+        </div>
+      </article>
+  
+      <article class="flex overflow-hidden flex-col rounded-lg bg-zinc-300 max-sm:mb-5 group">
+        <div class="relative overflow-hidden">
+          <img src="./assets/wakaya/wakaya_cultural.webp" alt="Cultural Experiences" class="object-cover w-full h-[280px] transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        <div class="flex flex-col items-center p-5 text-center">
+          <h2 class="mb-5 text-3xl font-bold">CULTURAL EXPERIENCES</h2>
+          <p class="mb-8 text-base leading-normal text-black">
+            Experience true Fijian traditions including a Kava Welcome Ceremony, dances, craft weaving, carving, rituals, and more. At Wakaya, we pride ourselves to guard and encourage Fijian traditions and to learn the beauty of Fiji’s inhabitants, who promote their culture with overwhelming joy and love.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+  
+  <section class="px-5 bg-zinc-300 bg-opacity-70">
+    <div class="grid gap-8 mx-auto my-0 grid-cols-[repeat(3,1fr)] max-w-[1440px] max-md:grid-cols-[repeat(2,1fr)] max-sm:grid-cols-[1fr]">
+      <article class="flex overflow-hidden flex-col rounded-lg bg-zinc-300 max-sm:mb-5 group">
+        <div class="relative overflow-hidden">
+          <img src="./assets/wakaya/wakaya_golf.webp" alt="Golf" class="object-cover w-full h-[280px] transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        <div class="flex flex-col items-center p-5 text-center">
+          <h2 class="mb-5 text-3xl font-bold">GOLF</h2>
+          <p class="mb-8 text-base leading-normal text-black">
+            Hit the links at Wakaya’s small but challenging 9-hole golf course that winds through an old coconut plantation and lush tropical forests.
+          </p>
+        </div>
+      </article>
+  
+      <article class="flex overflow-hidden flex-col rounded-lg bg-zinc-300 max-sm:mb-5 group">
+        <div class="relative overflow-hidden">
+          <img src="./assets/wakaya/wakaya_gym.webp" alt="Gym" class="object-cover w-full h-[280px] transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        <div class="flex flex-col items-center p-5 text-center">
+          <h2 class="mb-5 text-3xl font-bold">GYM</h2>
+          <p class="mb-8 text-base leading-normal text-black">
+            Grab some mallets from our Sports Bure and enjoy some friendly competition with a game on our beautiful croquet court, adjacent to our tennis court.
+          </p>
+        </div>
+      </article>
+  
+      <article class="flex overflow-hidden flex-col rounded-lg bg-zinc-300 max-sm:mb-5 group">
+        <div class="relative overflow-hidden">
+          <img src="./assets/wakaya/wakaya_hiking.webp" alt="Hiking" class="object-cover w-full h-[280px] transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        <div class="flex flex-col items-center p-5 text-center">
+          <h2 class="mb-5 text-3xl font-bold">HIKING</h2>
+          <p class="mb-8 text-base leading-normal text-black">
+            From leisurely trails up to Chieftains Leap to more challenging rocky hikes from the hill to the sea, enjoy your own self-led hiking adventure amidst the beautiful nature of Wakaya Island.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+  
+  <section class="px-5 bg-zinc-300 bg-opacity-70">
+    <div class="grid gap-8 mx-auto my-0 grid-cols-[repeat(3,1fr)] max-w-[1440px] max-md:grid-cols-[repeat(2,1fr)] max-sm:grid-cols-[1fr]">
+      <article class="flex overflow-hidden flex-col rounded-lg bg-zinc-300 max-sm:mb-5 group">
+        <div class="relative overflow-hidden">
+          <img src="./assets/wakaya/wakaya_recreationroom.webp" alt="Recreation Room" class="object-cover w-full h-[280px] transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        <div class="flex flex-col items-center p-5 text-center">
+          <h2 class="mb-5 text-3xl font-bold">RECREATION ROOM</h2>
+          <p class="mb-8 text-base leading-normal text-black">
+            Challenge your skills with a game of pool in our Recreation Room, perfect for rainy day entertainment or a shaded break from the sun.
+          </p>
+        </div>
+      </article>
+  
+      <article class="flex overflow-hidden flex-col rounded-lg bg-zinc-300 max-sm:mb-5 group">
+        <div class="relative overflow-hidden">
+          <img src="./assets/wakaya/Snorkeling-Wakaya.webp" alt="Snorkeling" class="object-cover w-full h-[280px] transition-transform duration-300 group-hover:scale-105" />
+        </div>
+        <div class="flex flex-col items-center p-5 text-center">
+          <h2 class="mb-5 text-3xl font-bold">SNORKELING</h2>
+          <p class="mb-8 text-base leading-normal text-black">
+            Experience the beauty and tranquility of our crystal blue waters, home to vibrant coral reefs and an array of tropical fish.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+   <!-- Section containing the carousel -->
+   <section class="py-10 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <div id="controls-carousel" class="relative w-full" data-carousel="static">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./assets/wakaya/wakaya-fishing.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                    <img src="./assets/wakaya/wakaya_gym.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./assets/wakaya/wakaya_golf.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./assets/wakaya/wakaya_hiking.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./assets/wakaya/wakaya_recreationroom.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!--Item 6-->>
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="./assets/wakaya/wakaya_activities.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!--Item 7-->>
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="./assets/wakaya/wakaya_activities.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+    </div>
+   </section>
+
+  
+
+
+</main>
+
+<footer class="bg-gray-100 py-12 text-black">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <!-- Logo -->
+    <div class="flex justify-center">
+      <img
+        src="./assets/wakaya/logologo.webp"
+        alt="Wakaya Island Resort Logo"
+        class="h-full w-35"
+      />
+    </div>
+
+    <!-- Divider -->
+    <hr class="my-8 border-gray-300" />
+
+    <!-- Main Content -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Social Media Section -->
+      <div class="text-center md:text-left">
+        <h3 class="text-xl font-semibold mb-4">FOLLOW US</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="#" class="hover:text-gray-600">Facebook: Wakaya Island Resort</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-gray-600">Instagram: @wakayaislandresort</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="text-center md:text-left">
+        <h3 class="text-xl font-semibold mb-4">CONTACT US</h3>
+        <ul class="space-y-2">
+          <li>Phone: +679 892 6901</li>
+          <li>Email: booking@wakayaislandresort.com</li>
+        </ul>
+      </div>
+
+      <!-- Location Section -->
+      <div class="text-center md:text-left">
+        <h3 class="text-xl font-semibold mb-4">LOCATE US</h3>
+        <p>Wakaya Island, Lomaiviti Archipelago, Fiji</p>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="my-8 border-gray-300" />
+  </div>
+</footer>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+ <!-- Script for Carousel Functionality -->
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const carousel = document.querySelector('[data-carousel="static"]');
+      const items = carousel.querySelectorAll('[data-carousel-item]');
+      const prevButton = carousel.querySelector('[data-carousel-prev]');
+      const nextButton = carousel.querySelector('[data-carousel-next]');
+
+      let currentIndex = 0;
+
+      function showItem(index) {
+          items.forEach((item, i) => {
+              item.classList.toggle('hidden', i !== index);
+          });
+      }
+
+      prevButton.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + items.length) % items.length;
+          showItem(currentIndex);
+      });
+
+      nextButton.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % items.length;
+          showItem(currentIndex);
+      });
+
+      // Initialize the first item as visible
+      showItem(currentIndex);
+  });
+</script>
+</body>
+
+</html>

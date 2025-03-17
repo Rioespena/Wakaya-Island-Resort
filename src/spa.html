@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <header class="fixed inset-x-0 top-0 flex justify-between items-center px-8 py-4 bg-zinc-700 bg-opacity-80 backdrop-blur-md z-[100] max-sm:px-6">
+        <!-- Logo -->
+        <h1 class="block py-1 text-lg font-semibold text-white">Wakaya Island Resort</h1>
+      
+        <!-- Desktop Navigation -->
+        <nav class="flex flex-1 justify-center gap-8 max-md:gap-4 max-sm:hidden">
+          <a href="index.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">HOME</a>
+          <a href="accommodation.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">ACCOMMODATIONS</a>
+          <a href="activities.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">ACTIVITIES</a>
+          <a href="dining.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">DINING</a>
+          <a href="spa.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">SPA</a>
+        </nav>
+      
+        <!-- Book Now Button -->
+        <a href="booking.html" class="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300 max-sm:hidden">
+          BOOK NOW
+        </a>
+      
+        <!-- Mobile Menu Button -->
+        <button class="text-2xl text-white cursor-pointer hidden max-sm:block" id="menu-btn">
+          ☰
+        </button>
+      
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="hidden flex-col absolute top-full left-0 w-full bg-zinc-700 bg-opacity-90 p-4 shadow-lg">
+          <a href="index.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">HOME</a>
+          <a href="accommodation.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">ACCOMMODATIONS</a>
+          <a href="activities.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">ACTIVITIES</a>
+          <a href="dining.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">DINING</a>
+          <a href="spa.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">SPA</a>
+          <a href="booking.html" class="block  text-sm text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300 text-center">BOOK NOW</a>
+        </nav>
+    </header> 
+    <main>
+        
+        <section class="relative w-full h-screen overflow-hidden">
+            <!-- Background Image with Dark Overlay -->
+            <div class="absolute w-full h-full bg-black/50"> <!-- Dark overlay (50% opacity) -->
+                <img 
+                    src="./assets/wakaya/SPA.webp" 
+                    class="w-full h-full object-cover opacity-70 grayscale-[20%]"
+                    alt="Resort Background"
+                />
+            </div>
+
+            <!-- Hero Content -->
+            <div class="absolute top-1/2 left-1/2 flex flex-col gap-8 items-center -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                <p class="text-5xl font-bold text-white max-sm:text-3xl">
+                    SPA
+                </p>
+            </div>
+        </section>
+
+        <section class="flex flex-col justify-center items-center px-6 py-16 w-full max-md:px-5 max-sm:px-4">
+            <img src="./assets/wakaya/logo.webp" alt="Bures Logo" class="w-[100px] h-[100px] mb-4" />
+            <h2 class="mb-6 text-3xl font-extrabold text-black text-center max-md:text-4xl max-sm:text-3xl">
+              Spa in Wakaya
+            </h2>
+            <p class="text-1xl leading-normal text-center text-black max-w-[800px] max-md:text-xl max-sm:text-lg">
+                Rejuvenate your mind and body with tranquil spa treatments inspired by nature. Indulge in soothing massages with locally sourced oils, detoxifying body wraps, and revitalizing facials infused with tropical botanicals. Let the calming ocean breeze enhance your yoga and meditation sessions, or soak in the serenity of a private outdoor bath surrounded by lush greenery. 
+                Experience pure relaxation in the heart of paradise.            
+            </p>
+        </section>
+
+        <section class="px-7 py-5 w-full max-w-[1440px] mx-auto">
+        <h2 class="mb-10 text-4xl font-bold text-center text-black max-md:text-3xl">
+            Massage Services
+        </h2>
+        <div class="flex gap-8 justify-center max-md:flex-col max-md:items-center max-md:gap-6">
+            <!-- First Card -->
+            <article class="flex flex-col flex-1 items-center p-8 bg-zinc-300 rounded-lg shadow-md max-w-[400px] max-md:w-full">
+            <h3 class="mb-6 text-3xl font-semibold text-center text-cyan-700 max-md:text-2xl">
+                East Meets West Massage
+            </h3>
+            <p class="mb-6 text-xl text-center text-black max-md:text-lg">
+                80 minutes
+            </p>
+            <p class="text-lg text-center text-black leading-relaxed max-md:text-base">
+                Experience optimal well-being for the mind, body, and spirit. Our
+                therapists combine the holistic healing techniques of the East,
+                restoring the body's natural balance, with the more specific muscle
+                manipulation of the West. We offer this treatment both in the spa or the
+                privacy of your own bure.
+            </p>
+            </article>
+
+            <!-- Second Card -->
+            <article class="flex flex-col flex-1 items-center p-8 bg-zinc-300 rounded-lg shadow-md max-w-[400px] max-md:w-full">
+            <h3 class="mb-6 text-3xl font-semibold text-center text-cyan-700 max-md:text-2xl">
+                Hot Stone Massage
+            </h3>
+            <p class="mb-6 text-xl text-center text-black max-md:text-lg">
+                80 minutes
+            </p>
+            <p class="text-lg text-center text-black leading-relaxed max-md:text-base">
+                Release tension, restore balance, and increase positive energy flow with
+                a hot stone massage. Warm stones are strategically placed on your body
+                and combined with our own cold-pressed virgin coconut massage oil to
+                relax tense muscles, increasing circulation in the body.
+            </p>
+            </article>
+
+            <!-- Third Card -->
+            <article class="flex flex-col flex-1 items-center p-8 bg-zinc-300 rounded-lg shadow-md max-w-[400px] max-md:w-full">
+            <h3 class="mb-6 text-3xl font-semibold text-center text-cyan-700 max-md:text-2xl">
+                Foot Massage
+            </h3>
+            <p class="mb-6 text-xl text-center text-black max-md:text-lg">
+                30 minutes
+            </p>
+            <p class="text-lg text-center text-black leading-relaxed max-md:text-base">
+                Receive many of the benefits of a tropical body massage without spoiling
+                your hair (or makeup). You'll start with a relaxing foot-bathing ritual,
+                then our expert therapist will massage your calves and work on the
+                pressure points of the feet to release tension and restore your
+                vitality.
+            </p>
+            </article>
+        </div>
+        </section>
+    
+        <section class="px-7 py-10 w-full max-w-[1440px] mx-auto">
+            <h2 class="mb-10 text-4xl font-bold text-center text-black max-md:text-3xl">
+              Skincare Services
+            </h2>
+            <div class="flex gap-8 justify-center max-md:flex-col max-md:items-center max-md:gap-6">
+              <!-- First Card -->
+              <article class="flex flex-col flex-1 items-center p-8 bg-zinc-300 rounded-lg shadow-md max-w-[400px] max-md:w-full">
+                <h3 class="mb-6 text-3xl font-semibold text-center text-cyan-700 max-md:text-2xl">
+                  Dilo Rescue Wrap
+                </h3>
+                <p class="mb-6 text-xl text-center text-black max-md:text-lg">
+                  50 minutes
+                </p>
+                <p class="text-lg text-center text-black leading-relaxed max-md:text-base">
+                  Soothe, moisturize, and heal sunburn, dehydration, or even insect bites with our healing blend of Dilo and virgin coconut oils, aloe vera, and passionflower extract, followed by a nourishing butter massage.
+                </p>
+              </article>
+          
+              <!-- Second Card -->
+              <article class="flex flex-col flex-1 items-center p-8 bg-zinc-300 rounded-lg shadow-md max-w-[400px] max-md:w-full">
+                <h3 class="mb-6 text-3xl font-semibold text-center text-cyan-700 max-md:text-2xl">
+                  Paradise Sugar Glow
+                </h3>
+                <p class="mb-6 text-xl text-center text-black max-md:text-lg">
+                  50 minutes
+                </p>
+                <p class="text-lg text-center text-black leading-relaxed max-md:text-base">
+                  Get glowing skin with a coconut milk and exotic dilo oil massage, followed by a pure sugar cane exfoliation.
+                </p>
+              </article>
+          
+              <!-- Third Card -->
+              <article class="flex flex-col flex-1 items-center p-8 bg-zinc-300 rounded-lg shadow-md max-w-[400px] max-md:w-full">
+                <h3 class="mb-6 text-3xl font-semibold text-center text-cyan-700 max-md:text-2xl">
+                  Tropical Renewal Facial
+                </h3>
+                <p class="mb-6 text-xl text-center text-black max-md:text-lg">
+                  60 minutes
+                </p>
+                <p class="text-lg text-center text-black leading-relaxed max-md:text-base">
+                  Improve skin tone and increase hydration with this phenomenal facial care treatment. This facial uses an ancient blend of Dilo and Papaya enzymes from the tropical isles of Fiji, and is great for both men and women.
+                </p>
+              </article>
+            </div>
+        </section>
+    
+        <section class="px-7 py-10 w-full max-w-[1440px] mx-auto">
+            <h2 class="mb-10 text-4xl font-bold text-center text-black max-md:text-3xl">
+              Mani & Pedi Services
+            </h2>
+            <div class="flex gap-8 justify-center max-md:flex-col max-md:items-center max-md:gap-6">
+              <!-- First Card -->
+              <article class="flex flex-col flex-1 items-center p-8 bg-zinc-300 rounded-lg shadow-md max-w-[400px] max-md:w-full">
+                <h3 class="mb-6 text-3xl font-semibold text-center text-cyan-700 max-md:text-2xl">
+                  Tropical Paradise Manicure
+                </h3>
+                <p class="mb-6 text-xl text-center text-black max-md:text-lg">
+                  With polish: 60 minutes<br />
+                  Without polish: 50 minutes
+                </p>
+                <p class="text-lg text-center text-black leading-relaxed max-md:text-base">
+                  Indulge in a rejuvenating hand treatment: a coconut-milk bath, followed by a sugar rub exfoliation with essential oils and coconut oil. A warm body butter wrap moisturizes your skin and finally your nails are polished to perfection with your choice of polish.
+                </p>
+              </article>
+          
+              <!-- Second Card -->
+              <article class="flex flex-col flex-1 items-center p-8 bg-zinc-300 rounded-lg shadow-md max-w-[400px] max-md:w-full">
+                <h3 class="mb-6 text-3xl font-semibold text-center text-cyan-700 max-md:text-2xl">
+                  Tropical Paradise Pedicure
+                </h3>
+                <p class="mb-6 text-xl text-center text-black max-md:text-lg">
+                  With polish: 60 minutes<br />
+                  Without polish: 50 minutes
+                </p>
+                <p class="text-lg text-center text-black leading-relaxed max-md:text-base">
+                  Indulge in a rejuvenating foot treatment: a coconut-milk bath, followed by a sugar rub exfoliation with essential oils and coconut oil. A warm body butter wrap moisturizes your feet and finally your toenails are polished to perfection with your choice of polish.
+                </p>
+              </article>
+          
+              <!-- Third Card -->
+              <article class="flex flex-col flex-1 items-center p-8 bg-zinc-300 rounded-lg shadow-md max-w-[400px] max-md:w-full">
+                <h3 class="mb-6 text-3xl font-semibold text-center text-cyan-700 max-md:text-2xl">
+                  Tropical Renewal Facial
+                </h3>
+                <p class="mb-6 text-xl text-center text-black max-md:text-lg">
+                  60 minutes
+                </p>
+                <p class="text-lg text-center text-black leading-relaxed max-md:text-base">
+                  Improve skin tone and increase hydration with this phenomenal facial care treatment. This facial uses an ancient blend of Dilo and Papaya enzymes from the tropical isles of Fiji, and is great for both men and women.
+                </p>
+              </article>
+            </div>
+        </section>
+
+        <section class="py-16 bg-zinc-300">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold text-black">Wakaya Spa Gallery</h2>
+                <p class="text-lg text-gray-700 mt-2">Discover the serene beauty and luxurious treatments of Wakaya Spa.</p>
+            </div>
+        
+            <div class="flex flex-wrap justify-center gap-3 px-5 w-full max-md:max-w-full">
+                <!-- First Image -->
+                <figure class="group flex justify-center">
+                    <img
+                        src="./assets/wakaya/Wakaya_Spa.webp"
+                        alt="Spa resort view"
+                        class="object-cover w-full h-full max-w-[300px] aspect-[1.5] transition-transform duration-300 group-hover:scale-105 rounded-lg shadow-lg" 
+                    />
+                </figure>
+            
+                <!-- Second Image -->
+                <figure class="group flex justify-center">
+                    <img
+                        src="./assets/wakaya/Wakaya_Spa1.webp"              
+                        alt="Spa treatment"
+                        class="object-cover w-full h-full max-w-[300px] aspect-[0.67] transition-transform duration-300 group-hover:scale-105 rounded-lg shadow-lg"
+                    />
+                </figure>
+            
+                <!-- Third Image -->
+                <figure class="group flex justify-center">
+                    <img
+                        src="./assets/wakaya/Wakaya_Spa2.webp"              
+                        alt="Spa amenities"
+                        class="object-cover w-full h-full max-w-[300px] aspect-[0.67] transition-transform duration-300 group-hover:scale-105 rounded-lg shadow-lg"
+                    />
+                </figure>
+            
+                <!-- Fourth Image -->
+                <figure class="group flex justify-center">
+                    <img
+                        src="./assets/wakaya/Wakaya_Spa4.webp"              
+                        alt="Spa exterior view"
+                        class="object-cover w-full h-full max-w-[300px] aspect-[1.5] transition-transform duration-300 group-hover:scale-105 rounded-lg shadow-lg" 
+                    />
+                </figure>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="bg-gray-100 py-12 text-black">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <!-- Logo -->
+          <div class="flex justify-center">
+            <img
+              src="./assets/wakaya/logologo.webp"
+              alt="Wakaya Island Resort Logo"
+              class="h-full w-35"
+            />
+          </div>
+      
+          <!-- Divider -->
+          <hr class="my-8 border-gray-300" />
+      
+          <!-- Main Content -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Social Media Section -->
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-semibold mb-4">FOLLOW US</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="hover:text-gray-600">Facebook: Wakaya Island Resort</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-gray-600">Instagram: @wakayaislandresort</a>
+                </li>
+              </ul>
+            </div>
+      
+            <!-- Contact Section -->
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-semibold mb-4">CONTACT US</h3>
+              <ul class="space-y-2">
+                <li>Phone: +679 892 6901</li>
+                <li>Email: booking@wakayaislandresort.com</li>
+              </ul>
+            </div>
+      
+            <!-- Location Section -->
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-semibold mb-4">LOCATE US</h3>
+              <p>Wakaya Island, Lomaiviti Archipelago, Fiji</p>
+            </div>
+          </div>
+      
+          <!-- Divider -->
+          <hr class="my-8 border-gray-300" />
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+  </script>
+</body>
+</html>
+
+

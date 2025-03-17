@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakaya Resort</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <header class="fixed inset-x-0 top-0 flex justify-between items-center px-8 py-4 bg-zinc-700 bg-opacity-80 backdrop-blur-md z-[100] max-sm:px-6">
+    <!-- Logo -->
+    <h1 class="block py-1 text-lg font-semibold text-white">Wakaya Island Resort</h1>
+
+    <!-- Desktop Navigation -->
+    <nav class="flex flex-1 justify-center gap-8 max-md:gap-4 max-sm:hidden">
+        <a href="index.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">HOME</a>
+        <a href="accommodation.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">ACCOMMODATIONS</a>
+        <a href="activities.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">ACTIVITIES</a>
+        <a href="dining.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">DINING</a>
+        <a href="spa.html" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">SPA</a>
+        <a href="#contactform" class="text-sm font-medium text-white hover:text-gray-300 transition duration-300">CONTACT</a>
+    </nav>
+
+    <!-- Weather Button & Info -->
+    <div class="flex items-center gap-4 max-sm:hidden">
+        <button onclick="getWeather()" class="text-sm font-medium text-white hover:bg-blue-600 px-4 py-2 rounded-full transition duration-300">
+            🌤️ Weather Now
+        </button>
+        <span id="weather-info" class="text-sm font-medium text-white"></span>
+    </div>
+
+    <!-- Book Now Button -->
+    <a href="booking.html" class="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300 max-sm:hidden">
+        BOOK NOW
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button class="text-2xl text-white cursor-pointer hidden max-sm:block" id="menu-btn">
+        ☰
+    </button>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden flex-col absolute top-full left-0 w-full bg-zinc-700 bg-opacity-90 p-4 shadow-lg">
+        <a href="index.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">HOME</a>
+        <a href="accommodation.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">ACCOMMODATIONS</a>
+        <a href="activities.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">ACTIVITIES</a>
+        <a href="dining.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">DINING</a>
+        <a href="spa.html" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">SPA</a>
+        <a href="#contactform" class="block py-2 text-sm text-white hover:text-gray-300 transition duration-300">CONTACT</a>
+        <button onclick="getWeather()" class="block text-sm text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full transition duration-300 text-center mt-2">
+            🌤️ Weather Now
+        </button>
+        <span id="mobile-weather-info" class="block text-sm text-white text-center mt-2"></span>
+        <a href="booking.html" class="block text-sm text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300 text-center mt-2">BOOK NOW</a>
+    </nav>
+  </header>
+    <main >
+        <!-- Hero Section -->
+        <section class="relative w-full h-screen overflow-hidden">
+                <!-- Background Image -->
+                <img 
+                src="./assets/wakaya/1.webp" 
+                class="absolute w-full h-full object-cover opacity-80" 
+                alt="Resort Background" 
+                />
+
+                <!-- Hero Content -->
+                <div class="absolute top-1/2 left-1/2 flex flex-col gap-8 items-center -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                    <img src="./assets/wakaya/Primary-Logo_White-1.webp" class="w-[400px] max-md:w-[300px] max-sm:w-[60%]" alt="Wakaya Resort Logo" />
+                    <a href="booking.html "class="px-14 py-5 text-1xl font-semibold text-black bg-white rounded-[30px] shadow-lg transition hover:bg-gray-200 max-sm:px-8 max-sm:py-3 max-sm:text-xl">
+                        BOOK NOW
+                    </a>
+                </div>
+        </section>
+
+        <!-- Text Section -->
+        <section class="flex flex-col items-center px-6 py-16 text-center">
+                <header class="mb-20">
+                    <h1 class="text-5xl font-semibold text-black max-md:text-4xl">
+                        Wakaya Island Resort
+                    </h1>
+                    <h2 class="mt-2 text-2xl text-gray-700 max-md:text-2xl">
+                        Where Time Slows and Luxury Flows
+                    </h2>
+                </header>
+
+                <article class="max-w-3xl text-xl text-gray-800 leading-relaxed">
+                    <p>
+                        Escape to Wakaya Island Resort, a private sanctuary of unrivaled beauty in the heart of Fiji. Surrounded by turquoise waters, lush tropical landscapes, and pristine white sand beaches, Wakaya offers an exclusive retreat for those seeking luxury, serenity, and adventure.
+                    </p>
+                    <p class="mt-4">
+                        Whether indulging in world-class cuisine, rejuvenating at the spa, or exploring the vibrant marine life, every moment on Wakaya is an invitation to experience paradise like never before.
+                    </p>
+                </article>
+        </section>
+
+        <section class="w-full mt-10 py-10 px-4 sm:px-20 bg-gray-200" style="background-image: url('./assets/wakaya/background.jpg'); background-size: cover; background-position: center;">
+            <div class="max-w-7xl mx-auto">
+                <!-- Grid layout for mobile, flex for larger screens -->
+                <div class="grid grid-cols-2 gap-4 sm:flex sm:justify-center sm:gap-6">
+                    <!-- Image 1 -->
+                    <figure class="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out w-full sm:w-96 h-96">
+                        <img 
+                            src="./assets/wakaya/INTRO1.webp" 
+                            alt="Wakaya Island Resort view" 
+                            class="w-full h-full object-cover"
+                        />
+                        <div class="absolute inset-0 bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 ease-in-out"></div>
+                    </figure>
+                    <!-- Image 2 -->
+                    <figure class="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out w-full sm:w-96 h-96">
+                        <img 
+                            src="./assets/wakaya/INTRO2.webp" 
+                            alt="Wakaya Island Resort accommodation" 
+                            class="w-full h-full object-cover"
+                        />
+                        <div class="absolute inset-0 bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 ease-in-out"></div>
+                    </figure>
+                    <!-- Image 3 -->
+                    <figure class="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out w-full sm:w-96 h-96">
+                        <img 
+                            src="./assets/wakaya/INTRO3.webp" 
+                            alt="Wakaya Island Resort amenities" 
+                            class="w-full h-full object-cover"
+                        />
+                        <div class="absolute inset-0 bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 ease-in-out"></div>
+                    </figure>
+                    <!-- Image 4 -->
+                    <figure class="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out w-full sm:w-96 h-96">
+                        <img 
+                            src="./assets/wakaya/INTRO4.webp" 
+                            alt="Wakaya Island Resort experience" 
+                            class="w-full h-full object-cover"
+                        />
+                        <div class="absolute inset-0 bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 ease-in-out"></div>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mt-30 flex flex-col items-center scroll-pb-10 rounded-none">
+            <h2 class="text-5xl text-black max-md:max-w-full max-md:text-4xl">
+                ACCOMMODATION
+            </h2>
+            <article class="mt-3 max-w-3xl text-xl text-gray-800 leading-relaxed text-center">
+                <p>
+                    Choose from our selection of stunning bures and villas, each designed to
+                    provide the ultimate escape in paradise. Book now and make your dream
+                    vacation a reality.
+                </p>
+            </article>
+            <div class="flex flex-col self-stretch px-14 mt-11 w-full bg-stone-300 max-md:px-5 max-md:mt-10 max-md:max-w-full">
+                <div class="max-md:max-w-full">
+                    <div class="flex gap-5 max-md:flex-col">
+                        <article class="w-6/12 max-md:ml-0 max-md:w-full">
+                            <div class="flex flex-col items-center pb-20 mx-auto w-full text-base text-center text-black bg-zinc-300 max-md:mt-10 max-md:max-w-full">
+                                <img
+                                    src="./assets/wakaya/ACCOM01.webp"
+                                    alt="Garden View Bure"
+                                    class="object-cover w-full h-96 transition-transform duration-300 group-hover:scale-105"
+                                />
+                                <h3 class="mt-11 ml-3.5 text-4xl max-md:mt-10 max-md:max-w-full">
+                                    Garden View Bure
+                                </h3>
+                                <div class="flex flex-wrap gap-8 mt-2.5 max-w-full w-[484px]">
+                                    <div class="flex flex-1 gap-10">
+                                        <span class="basis-auto"> Sleeps 2 adults & 1 child </span>
+                                        <span> 1 king bed </span>
+                                        <span>1 bathroom</span>
+                                    </div>
+                                </div>
+                                <span class="mt-2.5">1,650 sqft</span>
+                                <p class="mt-5 text-2xl max-md:max-w-full">
+                                    Relax to the sound of the ocean from your bed or spacious living
+                                    room, indulge in a luxurious soak in the oversize tub, or
+                                    rejuvenate your senses with an open-air lava rock shower. Nestled
+                                    within lush Fijian landscaping, this 1,650sqft one-bedroom suite
+                                    is a serene, and only a short, scenic stroll away from the
+                                    stunning white sand beach.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                            <div class="flex flex-col items-center pb-28 mx-auto w-full text-base text-center text-black bg-zinc-300 max-md:pb-24 max-md:mt-10 max-md:max-w-full">
+                                <img
+                                    src="./assets/wakaya/ACCOMO2.webp"
+                                    alt="Yase Bure"
+                                    class="object-cover w-full h-96 transition-transform duration-300 group-hover:scale-105"
+                                />
+                                <h3 class="mt-11 text-4xl max-md:mt-10">Yase Bure</h3>
+                                <div class="flex flex-wrap gap-8 mt-3 max-w-full w-[484px]">
+                                    <div class="flex flex-1 gap-10">
+                                        <span class="basis-auto"> Sleeps 2 adults & 1 child </span>
+                                        <span> 1 king bed </span>
+                                        <span>1 bathroom</span>
+                                    </div>
+                                </div>
+                                <span class="mt-2.5">1,650 sqft</span>
+                                <p class="mt-6 text-2xl max-md:max-w-full">
+                                    Enjoy breathtaking views of the South Pacific and sandy shoreline
+                                    just outside your door. This magnificent 2,400 sqft hideaway is
+                                    elegantly designed with unbeatable privacy and conveniently
+                                    located just steps away from world-class scuba diving and fishing
+                                    expeditions.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-5 py-10 mx-auto my-0 max-w-[1384px]">
+            <h1 class="mt-10 text-5xl text-black max-md:max-w-full max-md:text-4xl text-center">
+                DINING
+            </h1>
+            <p class="mt-3 max-w-3xl text-xl text-gray-800 leading-relaxed text-center mx-auto">
+                Every aspect of our dining experience has been perfectly chosen by our
+                very own local chefs. Inspired by the island's plentiful resources, no
+                two meals are the same on Wakaya. Our curated menu effortlessly blends
+                fresh South Pacific and Mediterranean flavors to ensure that each
+                culinary experience will ignite your palette.
+            </p>
+            <div class="p-5 bg-zinc-300 max-sm:p-2.5">
+                <div class="flex justify-between mb-5 max-md:flex-col max-md:gap-5 max-sm:mb-2.5">
+                <figure class="flex-[0_0_48%] max-md:flex-[0_0_100%] group flex justify-center items-center">
+                    <img
+                    src="./assets/wakaya/Dining_food.webp"
+                    alt="Dessert with powdered sugar and mint"
+                    class="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                    />
+                </figure>
+                <figure class="flex-[0_0_48%] max-md:flex-[0_0_100%] group flex justify-center items-center">
+                    <img
+                    src="./assets/wakaya/Dining_food1.webp"          
+                    alt="Seafood dish in coconut shell"
+                    class="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                    />
+                </figure>
+                </div>
+                <div class="flex justify-between mb-5 max-md:flex-col max-md:gap-5 max-sm:mb-2.5">
+                <figure class="flex-[0_0_48%] max-md:flex-[0_0_100%] group flex justify-center items-center">
+                    <img
+                    src="./assets/wakaya/Dining_food2.webp"          
+                    alt="Seafood dish with crispy garnish"
+                    class="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                    />
+                </figure>
+                <figure class="flex-[0_0_48%] max-md:flex-[0_0_100%] group flex justify-center items-center">
+                    <img
+                    src="./assets/wakaya/Dining_food3.webp"          
+                    alt="Dessert cups on serving tray"
+                    class="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                    />
+                </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex flex-col items-center text-5xl text-black max-md:text-4xl">
+            <h1 class="mt-10 text-5xl text-black max-md:max-w-full max-md:text-4xl text-center">
+            SPA
+            </h1>
+        
+            <p class="mt-3 max-w-3xl text-xl text-gray-800 leading-relaxed text-center mx-auto">
+            The Wakaya Club & Spa is a luxury private island resort located in Fiji's
+            Lomaiviti Group, offering an exclusive retreat amidst pristine natural
+            beauty. The resort features ten free-standing waterfront Fijian cottage
+            suites, known as bures, each providing an intimate and luxurious experience.
+            Guests can indulge in a variety of activities, including scuba diving,
+            snorkeling, hiking, and water sports, all set against the backdrop of the
+            island's lush landscapes and vibrant coral reefs. The on-site Breeze Spa
+            offers rejuvenating treatments using indigenous ingredients, providing a
+            sanctuary for relaxation and well-being.
+            </p>
+        
+            <div class="flex flex-wrap justify-center gap-3 px-5 py-6 mt-11 w-full whitespace-nowrap bg-zinc-300 max-md:mt-10 max-md:max-w-full">
+            <!-- First Image -->
+            <figure class="group flex justify-center">
+                <img
+                src="./assets/wakaya/Wakaya_Spa.webp"
+                alt="Spa resort view"
+                class="object-cover w-full h-full max-w-[300px] aspect-[1.5] transition-transform duration-300 group-hover:scale-105" 
+                />
+            </figure>
+        
+            <!-- Second Image -->
+            <figure class="group flex justify-center">
+                <img
+                src="./assets/wakaya/Wakaya_Spa1.webp"              
+                alt="Spa treatment"
+                class="object-cover w-full h-full max-w-[300px] aspect-[0.67] transition-transform duration-300 group-hover:scale-105"
+                />
+            </figure>
+        
+            <!-- Third Image -->
+            <figure class="group flex justify-center">
+                <img
+                src="./assets/wakaya/Wakaya_Spa2.webp"              
+                alt="Spa amenities"
+                class="object-cover w-full h-full max-w-[300px] aspect-[0.67] transition-transform duration-300 group-hover:scale-105"
+                />
+            </figure>
+        
+            <!-- Fourth Image -->
+            <figure class="group flex justify-center">
+                <img
+                src="./assets/wakaya/Wakaya_Spa4.webp"              
+                alt="Spa exterior view"
+                class="object-cover w-full h-full max-w-[300px] aspect-[1.5] transition-transform duration-300 group-hover:scale-105" 
+                />
+            </figure>
+            </div>
+        </section>
+
+        <section class="flex flex-col items-center px-6 py-12 w-full bg-white max-md:px-5 max-sm:px-4">
+            <h2 class="mt-10 text-5xl text-black max-md:max-w-full max-md:text-4xl text-center">
+            ACTIVITIES
+            </h2>
+            <p class="mt-6 text-2xl leading-normal text-center text-black max-w-[1208px] max-md:text-xl max-sm:text-base">
+            Wakaya offers a variety of activities that showcase its natural beauty and
+            cultural richness. Visitors can enjoy snorkeling and scuba diving to explore
+            vibrant coral reefs and diverse marine life. For those looking to stay
+            active, kayaking and paddleboarding provide a peaceful way to navigate the
+            tranquil waters. Nature walks and hiking trails allow guests to immerse
+            themselves in the lush landscapes, offering stunning views of the
+            surrounding environment. The island also offers rejuvenating spa treatments,
+            featuring traditional therapies using locally sourced ingredients. To
+            experience the local culture, visitors can participate in village visits and
+            cooking classes, giving them a deeper understanding of the island's
+            heritage.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mt-12 max-w-[1384px] max-md:grid-cols-1">
+            <!-- First Image -->
+            <figure class="group overflow-hidden rounded-[8px]">
+                <img
+                src="./assets/wakaya/ACTIVIRIES1.webp"
+                alt="Paddleboarding activity"
+                class="w-full h-[440px] object-cover rounded-[8px] transition-transform duration-300 group-hover:scale-105"
+                />
+            </figure>
+        
+            <!-- Second Image -->
+            <figure class="group overflow-hidden rounded-[8px]">
+                <img
+                src="./assets/wakaya/Wakaya_activities1.webp"
+                alt="Beach meditation"
+                class="w-full h-[440px] object-cover rounded-[8px] transition-transform duration-300 group-hover:scale-105"
+                />
+            </figure>
+        
+            <!-- Third Image -->
+            <figure class="group overflow-hidden rounded-[8px]">
+                <img
+                src="./assets/wakaya/ACTIVIES2.webp"
+                alt="Snorkeling activity"
+                class="w-full h-[440px] object-cover rounded-[8px] transition-transform duration-300 group-hover:scale-105"
+                />
+            </figure>
+        
+            <!-- Fourth Image -->
+            <figure class="group overflow-hidden rounded-[8px]">
+                <img
+                src="./assets/wakaya/wakaya_activities.webp"
+                alt="Tennis court aerial view"
+                class="w-full h-[440px] object-cover rounded-[8px] transition-transform duration-300 group-hover:scale-105"
+                />
+            </figure>
+            </div>
+        </section>
+
+        <section id="contactform" class="px-7 py-24 mx-auto my-0 max-w-[1440px] max-md:max-w-[991px] max-sm:px-4 max-sm:py-12 max-sm:max-w-screen-sm">
+            <h2 class="mb-10 text-4xl font-bold text-center text-black max-md:text-3xl">
+              Contact Us
+            </h2>
+            <p class="mb-16 text-xl text-center text-gray-600 max-md:text-lg">
+              Have questions or need assistance? Reach out to us, and we'll get back to you as soon as possible.
+            </p>
+          
+            <!-- Contact Form -->
+            <form class="max-w-2xl mx-auto" id="contact-form">
+              <!-- Name Field -->
+              <div class="mb-8">
+                <label for="name" class="block mb-2 text-lg font-medium text-gray-700">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your full name"
+                  class="w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+          
+              <!-- Email Field -->
+              <div class="mb-8">
+                <label for="email" class="block mb-2 text-lg font-medium text-gray-700">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  class="w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+          
+              <!-- Address Field -->
+              <div class="mb-8">
+                <label for="address" class="block mb-2 text-lg font-medium text-gray-700">Address</label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="Enter your address"
+                  class="w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+          
+              <!-- Message Field -->
+              <div class="mb-8">
+                <label for="message" class="block mb-2 text-lg font-medium text-gray-700">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Enter your message"
+                  class="w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                ></textarea>
+              </div>
+          
+              <!-- Submit Button -->
+              <div class="text-center">
+                <button
+                  type="submit"
+                  class="px-8 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-300"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+        </section>
+
+
+    </main>
+    
+    <footer id="contact" class="bg-gray-100 py-12 text-black">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <!-- Logo -->
+          <div class="flex justify-center">
+            <img
+              src="./assets/wakaya/logologo.webp"
+              alt="Wakaya Island Resort Logo"
+              class="h-full w-35"
+            />
+          </div>
+      
+          <!-- Divider -->
+          <hr class="my-8 border-gray-300" />
+      
+          <!-- Main Content -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Social Media Section -->
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-semibold mb-4">FOLLOW US</h3>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="hover:text-gray-600">Facebook: Wakaya Island Resort</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-gray-600">Instagram: @wakayaislandresort</a>
+                </li>
+              </ul>
+            </div>
+      
+            <!-- Contact Section -->
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-semibold mb-4">CONTACT US</h3>
+              <ul class="space-y-2">
+                <li>Phone: +679 892 6901</li>
+                <li>Email: booking@wakayaislandresort.com</li>
+              </ul>
+            </div>
+      
+            <!-- Location Section -->
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-semibold mb-4">LOCATE US</h3>
+              <p>Wakaya Island, Lomaiviti Archipelago, Fiji</p>
+            </div>
+          </div>
+      
+          <!-- Divider -->
+          <hr class="my-8 border-gray-300" />
+        </div>
+    </footer>
+      
+   
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+<script>
+  async function getWeather() {
+      const apiKey = "ae8aaadd7500431294865904251703";
+      const location = "Lomaiviti, FJ"; // Default location
+      const weatherInfo = document.getElementById("weather-info");
+      const mobileWeatherInfo = document.getElementById("mobile-weather-info");
+
+      // Check if elements exist
+      if (!weatherInfo || !mobileWeatherInfo) {
+          console.error("Weather elements not found.");
+          return;
+      }
+
+      try {
+          const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
+          const response = await fetch(url);
+          const data = await response.json();
+
+          if (!response.ok) {
+              throw new Error(data.message || "Failed to fetch weather.");
+          }
+
+          const weatherText = `🌡️ ${Math.round(data.main.temp)}°C - ${data.weather[0].description}`;
+          weatherInfo.innerText = weatherText;
+          mobileWeatherInfo.innerText = weatherText;
+      } catch (error) {
+          console.error("Weather fetch error:", error);
+          weatherInfo.innerText = "Weather Unavailable";
+          mobileWeatherInfo.innerText = "Weather Unavailable";
+      }
+  }
+</script>
+
+
+</body>
+
+</html>
